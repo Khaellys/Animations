@@ -1,0 +1,47 @@
+$background-color:  #2C3E50;
+$title-color: silver;
+$filtre-color-start: rgb(146, 139, 139);
+$filtre-color-end: blanchedalmond;
+@mixin filtre
+{
+    border: 2.5px solid #1D1E22;
+	border-radius: 30px;
+	padding: 12px 20px;
+	width: 130px;
+	margin: 50px;
+	font-weight: bold;
+	background-color: $filtre-color-start;  
+}
+
+body
+{
+	background-color: $background-color;
+}
+
+h3
+{
+	color: $title-color;
+	margin: 30px;
+}
+
+.filtre
+{
+	
+	@include filtre;
+	transform: scale(1);
+	cursor: pointer;
+	transition-property: transform;
+  	transition: transform 400ms, background-color 300ms 150ms;
+}
+
+.filtre:hover 
+{
+	transform: scale(1.15);
+	background-color: $filtre-color-end;
+}
+
+.remarque
+{
+	color: whitesmoke;
+	margin-left: 30px;
+}
